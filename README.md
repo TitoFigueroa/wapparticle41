@@ -61,7 +61,8 @@ https://k3s.io/ --> a light weight Linux kubernetes version to install on your l
 In order to get the application working, we need to install 3 node packages. Please follow below commands to get the build
 
 ```
-Give the example
+docker build -t localnpm -f ./docker-images/DockerfileNPM .
+docker run --rm -v $(pwd):/tmp localnpm
 ```
 
 

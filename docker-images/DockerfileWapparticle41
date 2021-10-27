@@ -1,5 +1,6 @@
 FROM node:latest
 ENV NODE_ENV=development
 WORKDIR /app
-COPY ./src WORKDIR
+COPY ./src /app
+RUN npm install -d /app
 EXPOSE 8080
