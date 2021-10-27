@@ -1,7 +1,8 @@
 FROM node:latest
-ENV NODE_ENV=development
+ENV NODE_ENV=production
 WORKDIR /app
-COPY ./src /app
-RUN npm install -d /app
-#CMD [ "node","index.js" ]
+COPY ["./src/package.json", "./src/package-lock.json*", "./"]
+RUN npm install --production
+COPY ./src/app/index.js ./
+CMD [ "node","index.js" ]
 EXPOSE 8080
