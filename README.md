@@ -61,12 +61,13 @@ https://k3s.io/ --> a light weight Linux kubernetes version to install on your l
 In order to get the application working, we need to install 3 node packages. Please follow below commands to get the build
 
 ```
-docker build -t localnpm -f ./docker-images/DockerfileNPM .
-docker run --rm -v $(pwd):/tmp localnpm
+docker build -t wapparticle41 -f ./docker-image/Dockerfile .
+
 ```
 
-
 ## 🔧 Running a tests <a name = "tests"></a>
+
+Lets start the app first, execute --> docker run --rm -it -p 8080:8080 wapparticle41 
 
 A simple way to test it is opening on the browser next ip:port address -> http://127.0.0.1:8080
 
