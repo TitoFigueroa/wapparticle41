@@ -3,4 +3,5 @@ ENV NODE_ENV=development
 WORKDIR /app
 COPY ./src /app
 RUN npm install -d /app
+#CMD [ "node","index.js" ]
 EXPOSE 8080
