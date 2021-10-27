@@ -75,7 +75,19 @@ NOTE: if you have a local lan you can try hit the ipv4 address of the hosting co
 
 ## 🎈 Pushing docker image to docker hub <a name="usage"></a>
 
-Add notes about how to use the system.
+Lets push our built dockerimage.
+
+In order to get this step done, we need to first tag the dockerimage with the repositoryname we have on dockerhub and add a tag of the version, in this case this is initializing so i will put version 0.0.1 (same as code app)
+
+docker tag wapparticle41:latest jfrace/wapparticle41:v0.0.1
+docker login
+docker push jfrace/wapparticle41:v0.0.1
+
+
+And thats all. 
+
+NOTE: during docker login its necessary you have a docker hub user already created, cause it will prompt a message asking for user and password.
+
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
